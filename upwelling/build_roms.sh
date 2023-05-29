@@ -302,7 +302,7 @@ if [ $dprint -eq 1 ]; then
   make $debug
 else
   if [ $parallel -eq 1 ]; then
-    make $NCPUS
+    make $NCPUS CPP=cpp
   else
     make
   fi
