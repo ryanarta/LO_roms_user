@@ -13,13 +13,14 @@
 #SBATCH --time=00:20:00
 
 ## Memory per node
-#SBATCH --mem=128G
+##SBATCH --mem=128G
 
 module purge
 module load intel/oneAPI
-NFDIR=/gscratch/macc/local/netcdf-ifort/
+#NFDIR=/gscratch/macc/local/netcdf-ifort/
+NFDIR=/scinet/intel/2019u4/compilers_and_libraries_2019.4.243/linux/bin/intel64/
 export LD_LIBRARY_PATH=${NFDIR}/lib:${LD_LIBRARY_PATH}
 
-RUN_DIR=/home/h/hansi/ryanarta/LO_roms_user/upwelling
+RUN_DIR=/project/h/hansi/ryanarta/LO_roms_user/upwelling
 mpirun -np 4 $RUN_DIR/romsM $RUN_DIR/roms_upwelling.in > $RUN_DIR/roms_log.txt
 

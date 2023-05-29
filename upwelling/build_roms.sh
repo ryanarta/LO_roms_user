@@ -109,7 +109,7 @@ export   ROMS_APPLICATION=$THISDIR
 # Set a local environmental variable to define the path to the directories
 # where all this project's files are kept.
 
-export     MY_ROOT_DIR=/home/h/hansi/ryanarta
+export     MY_ROOT_DIR=/project/h/hansi/ryanarta
 export     MY_PROJECT_DIR=${PWD}
 
 # The path to the user's local current ROMS source code.
